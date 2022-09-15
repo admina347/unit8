@@ -1,0 +1,15 @@
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/bin/Debug/net6.0/unit8
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/bin/Debug/net6.0/unit8.deps.json
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/bin/Debug/net6.0/unit8.runtimeconfig.json
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/bin/Debug/net6.0/unit8.dll
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/bin/Debug/net6.0/unit8.pdb
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.csproj.AssemblyReference.cache
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.GeneratedMSBuildEditorConfig.editorconfig
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.AssemblyInfoInputs.cache
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.AssemblyInfo.cs
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.csproj.CoreCompileInputs.cache
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.dll
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/refint/unit8.dll
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.pdb
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/unit8.genruntimeconfig.cache
+/home/admina/Документы/C-sharp курс/SkillFactory/unit8/obj/Debug/net6.0/ref/unit8.dll
