@@ -8,7 +8,7 @@
             string dirPath = "/home/admina/SFtest";
             int fCount = 0, dCount = 0, efCount = 0, edCount = 0;;
             DateTime laccessTime;    //посл доступ
-            int lifeSpan = 3;    //через сколько протухло
+            int lifeSpan = 30;    //через сколько протухло
             DateTime expTime;   //время просрочки
             DateTime curTime = DateTime.Now;    //время сейчас
             Console.WriteLine("Введите путь к папке:");
