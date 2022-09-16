@@ -24,7 +24,7 @@
         {
             //
             long dTotalSize = 0, fTotalSize = 0;
-            long dTotalSizeMb = 0, fTotalSizeMb = 0;
+            long totalSizeKb = 0, totalSizeMb = 0;
 
             string dirPath = "/home/admina/SFtest";
             Console.WriteLine("Введите путь к папке:");
@@ -41,18 +41,19 @@
             else    //папка есть
             {
                 //
-                GetFileInfo(dirInfo);
+                GetFileInfo(dirInfo, out fTotalSize);
                 //
                 GetFolderInfo(folders, out dTotalSize);
-                Console.WriteLine("Размер пакпки {0}: {1} байт", dirInfo.Name, dTotalSize);
-                dTotalSizeMb = dTotalSize / 2048;
-                Console.WriteLine("Размер пакпки {0}: {1} Kбайт", dirInfo.Name, dTotalSizeMb);
+                Console.WriteLine("Размер пакпки {0}: {1} байт", dirInfo.Name, dTotalSize + fTotalSize);
+                //totalSizeKb = (dTotalSize + fTotalSize) / 1024;
+                //totalSizeMb = totalSizeKb / 1024;
+                //Console.WriteLine("Размер пакпки {0}: {1} Mб", dirInfo.Name, totalSizeMb);
             }
         }
         public static void GetFolderInfo(DirectoryInfo[] folders, out long dTotalSize)
         {
             long dSize = 0;
-            Console.WriteLine("папки: ");
+            //Console.WriteLine("папки: ");
             foreach (var folder in folders)
             {
                 try
@@ -67,13 +68,17 @@
             }
             dTotalSize = dSize;
         }
-        public static void GetFileInfo(DirectoryInfo d)
+        public static void GetFileInfo(DirectoryInfo d, out long fTotalSize)
         {
-            Console.WriteLine("Файлы: ");
+            //
+            long fSize = 0;
+            //Console.WriteLine("Файлы: ");
             foreach(var file in d.GetFiles())
             {
-                Console.WriteLine("{0} - {1}байт", file.Name, file.Length);
+                //Console.WriteLine("{0} - {1}байт", file.Name, file.Length);
+                fSize = fSize + file.Length;
             }
+            fTotalSize = fSize;
         }
     }
 }
