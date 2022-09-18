@@ -72,7 +72,7 @@
                                 edCount = edCount + 1;
                             }
                         }
-                    }
+                     }
                     if (dCount > 0)
                     {
                         Console.WriteLine("Папки {0}шт в каталоге: {1} которые не использовались более {2} минут - удалены!", dCount, dirInfo.Name, lifeSpan);
