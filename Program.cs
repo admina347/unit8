@@ -27,7 +27,6 @@ namespace FinalTask
             if (!dirInfo.Exists)
             {
                 dirInfo.Create();
-                Console.WriteLine("Создана папка: {0}", dirInfo.Name);
             }
             else    //Удалим файлы чтобы не дописывать в них.
             {
@@ -35,7 +34,6 @@ namespace FinalTask
                 {
                     file.Delete();
                 }
-                Console.WriteLine("Папка {0} уже существет, очистка содержимого", dirInfo.Name);
             }
             string dirFullName = dirInfo.FullName;
             BinaryFormatter formatter = new BinaryFormatter();
@@ -45,9 +43,6 @@ namespace FinalTask
                 try
                 {
                     students = (Student[])formatter.Deserialize(fs);
-                    Console.WriteLine("Загружен список студентов: {0}шт.", students.Count());
-
-
                 }
                 catch (Exception ex)
                 {
@@ -57,7 +52,6 @@ namespace FinalTask
             Array.Sort(students, (x, y) => String.Compare(x.Name, y.Name));     //Сортировка
             foreach (Student student in students)
             {
-                //Console.WriteLine("{1} {0} {2}", student.Name, student.Group, student.DateOfBirth);
                 string filePath = dirFullName + student.Group + ".txt";
                 string strToWrite = student.Name + ", " + student.DateOfBirth.ToShortDateString();
                 if (!File.Exists(filePath))
@@ -65,8 +59,6 @@ namespace FinalTask
                     using (StreamWriter sw = File.CreateText(filePath))
                     {
                         sw.WriteLine(strToWrite);
-                        Console.WriteLine("Создан файл группы: {0}.txt", student.Group);
-                        Console.WriteLine("Студент {0} добавлен в: {1}.txt", student.Name, student.Group);
                     }
                 }
                 else
@@ -75,7 +67,6 @@ namespace FinalTask
                     using (StreamWriter sw = fileInfo.AppendText())
                     {
                         sw.WriteLine(strToWrite);
-                        Console.WriteLine("Студент {0} добавлен в: {1}.txt", student.Name, student.Group);
                     }
                 }
             }
